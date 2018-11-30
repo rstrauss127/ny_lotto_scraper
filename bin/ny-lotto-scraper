@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
-require './lib/ny_lotto_scraper'
+
+require "bundler/setup"
+require "ny_lotto_scraper"
 
 NyLottoScraper::CLI.new.call

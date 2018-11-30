@@ -11,4 +11,4 @@ require "ny_lotto_scraper"
 # Pry.start
 
 require "irb"
-IRB.start(__FILE__)
+IRB.start
