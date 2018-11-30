@@ -9,6 +9,9 @@ class NyLottoScraper::CLI
   def list_games
     puts "Todays Lotto Info:"
     @games = NyLottoScraper::Game.today
+    @games.each.with_index(1) do |game, i|
+      puts "#{i}. #{game.name}-#{game.jackpot}-#{game.next_drawing}"
+    end
   end
 
   def menu
