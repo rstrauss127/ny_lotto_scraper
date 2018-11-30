@@ -1,6 +1,2 @@
-require "ny_lotto_scraper/version"
-
-module NyLottoScraper
-  class Error < StandardError; end
-  # Your code goes here...
-end
+require_relative "./ny_lotto_scraper/version"
+require_relative './ny_lotto_scraper/cli'
