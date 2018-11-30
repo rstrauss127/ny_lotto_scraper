@@ -16,7 +16,7 @@ class NyLottoScraper::CLI
 
     input = nil
     while input != "exit"
-      puts "Enter the number of the game you'd like more info on, or type list, or type exit:"
+      puts "Enter the number of the game you'd like to see winning numbers for, or type list, or type exit:"
       input = gets.strip.downcase
       case input
       when "1"
