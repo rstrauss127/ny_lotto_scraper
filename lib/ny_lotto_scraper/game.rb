@@ -7,7 +7,8 @@ class NyLottoScraper::Game
 
   def self.scrape_games
     games = []
-    #go to https://nylottery.ny.gov/ find the game
+
+    games << self.scrape_mega_millions
       #Go to mega-millions
     #extract properties
     #instantiate a game
@@ -16,4 +17,9 @@ class NyLottoScraper::Game
     games
   end
 
+  def self.scrape_mega_millions
+    doc = Nokogiri::HTML(open("https://nylottery.ny.gov/mega-millions"))
+    name = doc.search("h1.header2").text
+    binding.pry
+  end
 end

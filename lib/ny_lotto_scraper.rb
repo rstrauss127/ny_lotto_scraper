@@ -1,3 +1,4 @@
+require 'open-uri'
 require 'nokogiri'
 require 'pry'
 require_relative "./ny_lotto_scraper/version"
