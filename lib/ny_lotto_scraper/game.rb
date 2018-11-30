@@ -1,8 +1,9 @@
 class NyLottoScraper::Game
   attr_accessor :name, :jackpot, :next_drawing, :latest_winners, :url
 
-  def self.today 
+  def self.today #scrape url
     #I should return a bunch of instances of Game
+
     #puts <<-DOC.gsub /^\s*/, ''
     #  1. Mega Millions - $190 Million - Friday, Nov 30 - 12 24 37 42 57 18 - https://nylottery.ny.gov/mega-millions
     #  2. Powerball - $183 Million - Saturday, Dec 1 - 04 19 59 68 69 21 - https://nylottery.ny.gov/powerball
