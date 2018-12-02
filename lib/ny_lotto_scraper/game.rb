@@ -1,5 +1,5 @@
 class NyLottoScraper::Game
-  attr_accessor :name, :jackpot, :next_jackpot, :results, :url
+  attr_accessor :title, :draw_results, :url, :next_jackpot
 
   def self.today #scrape each page and then return games based on that data
     self.scrape_games
@@ -14,9 +14,12 @@ class NyLottoScraper::Game
   def self.scrape_lotto
     doc = Nokogiri::HTML(open("https://www.lotteryusa.com/new-york/"))
 
-    name = doc.css("tbody").css("tr").css("div.game-title").first.text
-    results = doc.css("tbody").css("tr").css("ul.draw-result").first.text
-    nextjackpot = doc.css("tbody").css("tr").css("td.next-jackpot").first.text
+    game = self.new
+    game.title = doc.css("tbody").css("tr").css("div.game-title").first.text
+    game.draw_results = doc.css("tbody").css("tr").css("ul.draw-result").first.text
+    game.next_jackpot = doc.css("tbody").css("tr").css("td.next-jackpot").first.text
+    game.url = "https://www.lotteryusa.com/new-york/lotto/year"
+    game
     binding.pry
   end
 end
