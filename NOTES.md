@@ -12,8 +12,10 @@ NY LOTTO SCRAPER
 A command line interface for Past winning numbers for draw games from the NY LOTTO
 
 user types - ny-lotto
-
-Show a list of games
+CLI
+  -SCRAPER
+    -Game :name, :drawing
+      -Drawing  :result, :jackpot, :date
 
 
 
@@ -23,8 +25,4 @@ Show a list of games
 #  3. Lotto - $4.7 Million - Saturday, Dec 1 - 02 03 21 23 35 57 17 - https://nylottery.ny.gov/lotto
 #DOC
 a game has
-  a title
-  current jackpot
-  next drawing
-  latest winning numbers
-  url
+n
