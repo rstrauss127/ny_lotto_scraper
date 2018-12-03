@@ -1,0 +1,38 @@
+=> [[32m#<NyLottoScraper::Game:0x00000001fd1b40[0m
+  @draw_results[32m=[0m
+   [31m[1;31m"[0m[31m5[1;35m\n[0m[31m  6[1;35m\n[0m[31m  12[1;35m\n[0m[31m  20[1;35m\n[0m[31m  50[1;35m\n[0m[31m  54[1;35m\n[0m[31m                                        46[1;35m\n[0m[31m            Bonus[1;31m"[0m[31m[0m,
+  @title[32m=[0m[31m[1;31m"[0m[31mLotto[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<NyLottoScraper::Game:0x00000001fcbbf0[0m
+  @draw_results[32m=[0m[31m[1;31m"[0m[31m0[1;35m\n[0m[31m  7[1;35m\n[0m[31m  6[1;31m"[0m[31m[0m,
+  @title[32m=[0m[31m[1;31m"[0m[31mMidday Numbers[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<NyLottoScraper::Game:0x00000001fcac00[0m @draw_results[32m=[0m[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m, @title[32m=[0m[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<NyLottoScraper::Game:0x00000001fca138[0m
+  @draw_results[32m=[0m[31m[1;31m"[0m[31m1[1;35m\n[0m[31m  8[1;35m\n[0m[31m  5[1;35m\n[0m[31m  3[1;31m"[0m[31m[0m,
+  @title[32m=[0m[31m[1;31m"[0m[31mMidday Win 4[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<NyLottoScraper::Game:0x00000001fc9508[0m
+  @draw_results[32m=[0m[31m[1;31m"[0m[31m0[1;35m\n[0m[31m  0[1;35m\n[0m[31m  8[1;31m"[0m[31m[0m,
+  @title[32m=[0m[31m[1;31m"[0m[31mNumbers[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<NyLottoScraper::Game:0x00000001fc8950[0m @draw_results[32m=[0m[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m, @title[32m=[0m[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<NyLottoScraper::Game:0x00000001fc7960[0m
+  @draw_results[32m=[0m
+   [31m[1;31m"[0m[31m3[1;35m\n[0m[31m  5[1;35m\n[0m[31m  8[1;35m\n[0m[31m  9[1;35m\n[0m[31m  13[1;35m\n[0m[31m  27[1;35m\n[0m[31m  29[1;35m\n[0m[31m  31[1;35m\n[0m[31m  36[1;35m\n[0m[31m  39[1;35m\n[0m[31m  43[1;35m\n[0m[31m  54[1;35m\n[0m[31m  56[1;35m\n[0m[31m  57[1;35m\n[0m[31m  64[1;35m\n[0m[31m  68[1;35m\n[0m[31m  69[1;35m\n[0m[31m  72[1;35m\n[0m[31m  76[1;35m\n[0m[31m  80[1;31m"[0m[31m[0m,
+  @title[32m=[0m[31m[1;31m"[0m[31mPick 10[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<NyLottoScraper::Game:0x00000001fc6588[0m
+  @draw_results[32m=[0m[31m[1;31m"[0m[31m3[1;35m\n[0m[31m  5[1;35m\n[0m[31m  8[1;35m\n[0m[31m  16[1;35m\n[0m[31m  20[1;31m"[0m[31m[0m,
+  @title[32m=[0m[31m[1;31m"[0m[31mTake 5[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<NyLottoScraper::Game:0x00000001fc58b8[0m
+  @draw_results[32m=[0m[31m[1;31m"[0m[31m5[1;35m\n[0m[31m  9[1;35m\n[0m[31m  0[1;35m\n[0m[31m  8[1;31m"[0m[31m[0m,
+  @title[32m=[0m[31m[1;31m"[0m[31mWin 4[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<NyLottoScraper::Game:0x00000001fc4c10[0m
+  @draw_results[32m=[0m
+   [31m[1;31m"[0m[31m29[1;35m\n[0m[31m  41[1;35m\n[0m[31m  48[1;35m\n[0m[31m  52[1;35m\n[0m[31m  57[1;35m\n[0m[31m                                        4[1;35m\n[0m[31m            CashBall[1;31m"[0m[31m[0m,
+  @title[32m=[0m[31m[1;31m"[0m[31mCash4Life[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<NyLottoScraper::Game:0x00000001fb7f10[0m @draw_results[32m=[0m[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m, @title[32m=[0m[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<NyLottoScraper::Game:0x00000001fb7240[0m
+  @draw_results[32m=[0m
+   [31m[1;31m"[0m[31m25[1;35m\n[0m[31m  28[1;35m\n[0m[31m  40[1;35m\n[0m[31m  43[1;35m\n[0m[31m  63[1;35m\n[0m[31m                                        19[1;35m\n[0m[31m            MB[1;35m\n[0m[31m                                        Megaplier: 3[1;31m"[0m[31m[0m,
+  @title[32m=[0m[31m[1;31m"[0m[31mMega Millions[1;31m"[0m[31m[0m[32m>[0m,
+ [32m#<NyLottoScraper::Game:0x00000001fb5cb0[0m
+  @draw_results[32m=[0m
+   [31m[1;31m"[0m[31m10[1;35m\n[0m[31m  11[1;35m\n[0m[31m  47[1;35m\n[0m[31m  55[1;35m\n[0m[31m  58[1;35m\n[0m[31m                                        26[1;35m\n[0m[31m            PB[1;35m\n[0m[31m                                        Power Play: 2[1;31m"[0m[31m[0m,
+  @title[32m=[0m[31m[1;31m"[0m[31mPowerball[1;31m"[0m[31m[0m[32m>[0m]
