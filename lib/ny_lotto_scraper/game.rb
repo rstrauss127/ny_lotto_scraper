@@ -12,7 +12,7 @@ class NyLottoScraper::Game
   end
 
   def self.scrape_lotto
-    doc = Nokogiri::HTML(open("https://www.lotteryusa.com/new-york/"))
+    doc = Nokogiri::HTML.parse(open("https://www.lotteryusa.com/new-york/"))
 
     game = self.new
     game.title = doc.css("tbody").css("tr").css("div.game-title").first.text
@@ -23,3 +23,8 @@ class NyLottoScraper::Game
     binding.pry
   end
 end
+
+def self.scrape_games
+  x = = doc.css("table.state-results tr")
+  x.shift #remove header
+  CREATE OBJECTS FROM X
