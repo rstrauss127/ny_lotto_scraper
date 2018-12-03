@@ -9,7 +9,7 @@ NY LOTTO SCRAPER
 7. Discover objects.
 8. Program
 
-A command line interface for Past winning numbers for draw games from the NY LOTTO
+A command line interface for latest winning numbers for draw games from the NY LOTTO
 
 user types - ny-lotto
 CLI
@@ -20,9 +20,27 @@ CLI
 
 
 #puts <<-DOC.gsub /^\s*/, ''
-#  1. Mega Millions - $190 Million - Friday, Nov 30 - 12 24 37 42 57 18 - https://nylottery.ny.gov/mega-millions
-#  2. Powerball - $183 Million - Saturday, Dec 1 - 04 19 59 68 69 21 - https://nylottery.ny.gov/powerball
-#  3. Lotto - $4.7 Million - Saturday, Dec 1 - 02 03 21 23 35 57 17 - https://nylottery.ny.gov/lotto
+#  1. Lotto
+#  2. Midday Numbers
+#  3. Midday Win 4
+#  4. Numbers
+#  5. Pick 10
+#  6. Take 5
+#  7. Win 4
+#  8. Cash4Life
+#  9. Mega Millions
+# 10. Powerball
+
+#Which game would you like the latest results for?
+7. win 4
+#Results from: Sun, Dec 02, 2018  - 5 9 0 8 - $1,000
+
+#Would you like information on this games next drawing? (Y/N)
+Y
+#$1,000-Mon, Dec 03, 2018
+#list menu again
+N
+#list menu again
+
+
 #DOC
-a game has
-n

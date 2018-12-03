@@ -25,16 +25,26 @@ class NyLottoScraper::Game
 
 
   def self.scrape_games
-        doc = Nokogiri::HTML.parse(open("https://www.lotteryusa.com/new-york/"))
+    games = []
+    doc = Nokogiri::HTML.parse(open("https://www.lotteryusa.com/new-york/"))
     x = doc.css("table.state-results tr")
     x.shift #remove header
     #CREATE OBJECTS FROM X
-    binding.pry
-
-        x.each do |tray| ##b is instance of  game and has a title 
+        x.each do |tray| ##b is instance of  game and has a title
           b = self.new
           b.title = tray.css("div.game-title").text
+          games << b
         end
   end
 
+  def self.grab_results
+    doc = Nokogiri::HTML.parse(open("https://www.lotteryusa.com/new-york/"))
+    x = doc.css("table.state-results tr")
+    results =[]
+    ul = x.search("ul.draw-result")
+    ul.each do |list|
+      results << list.inner_text.strip
+    end
+    binding.pry
+  end
 end
