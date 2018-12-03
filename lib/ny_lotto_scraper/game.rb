@@ -20,11 +20,21 @@ class NyLottoScraper::Game
     game.next_jackpot = doc.css("tbody").css("tr").css("td.next-jackpot").first.text
     game.url = "https://www.lotteryusa.com/new-york/lotto/year"
     game
-    binding.pry
-  end
-end
 
-def self.scrape_games
-  x = = doc.css("table.state-results tr")
-  x.shift #remove header
-  CREATE OBJECTS FROM X
+  end
+
+
+  def self.scrape_games
+        doc = Nokogiri::HTML.parse(open("https://www.lotteryusa.com/new-york/"))
+    x = doc.css("table.state-results tr")
+    x.shift #remove header
+    #CREATE OBJECTS FROM X
+    binding.pry
+
+        x.each do |tray| ##b is instance of  game and has a title 
+          b = self.new
+          b.title = tray.css("div.game-title").text
+        end
+  end
+
+end
