@@ -5,11 +5,6 @@ class NyLottoScraper::Game
     self.scrape_games
   end
 
-  def self.scrape_games
-    games = []
-    games << self.scrape_lotto
-    games
-  end
 
   def self.scrape_games
     games = []
@@ -26,25 +21,9 @@ class NyLottoScraper::Game
           b.next_jackpot = game.css("span.next-jackpot-amount").text.strip
           games << b
         end
+        games.delete_if{|i| i.title == ""}#drop blank objects
      binding.pry
-
+     games
   end
 
-  def self.grab_results
-    doc = Nokogiri::HTML.parse(open("https://www.lotteryusa.com/new-york/"))
-    x = doc.css("table.state-results tr")
-
-
-
-    next_drawing_date = []
-    x..css("td.jackpot").each do |date|
-       next_drawing_date << date.text
-     end
-
-    next_jackpot = []
-    x.css("span.next-jackpot-amount").each do |pot|
-      next_jackpot << pot.text.strip
-    end
-
-  end
 end

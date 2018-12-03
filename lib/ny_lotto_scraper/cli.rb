@@ -10,7 +10,7 @@ class NyLottoScraper::CLI
     puts "Todays Lotto Info:"
     @games = NyLottoScraper::Game.today
     @games.each.with_index(1) do |game, i|
-      puts "#{i}. #{game.name}-#{game.jackpot}-#{game.next_drawing}"
+      puts "#{i}. #{game.title}"
     end
   end
 
@@ -22,7 +22,7 @@ class NyLottoScraper::CLI
 
       if input.to_i > 0
         the_game = @games[input.to_i-1]
-        puts "#{the_game.name}-#{the_game.jackpot}-#{the_game.next_drawing}"
+        puts "#{the_game.title}-#{the_game.jackpot}-#{the_game.draw_results}"
       elsif input == "list"
         list_games
       else
