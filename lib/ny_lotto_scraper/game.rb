@@ -41,10 +41,17 @@ class NyLottoScraper::Game
     doc = Nokogiri::HTML.parse(open("https://www.lotteryusa.com/new-york/"))
     x = doc.css("table.state-results tr")
     results =[]
-    ul = x.search("ul.draw-result")
-    ul.each do |list|
+    x.css("ul.draw-result").each do |list|
       results << list.inner_text.strip
+    end
+
+    jackpots = []
+    x.css("td.jackpot").each do |pot|
+      jackpots << pot.inner_text.strip
     end
     binding.pry
   end
+
+
+
 end
