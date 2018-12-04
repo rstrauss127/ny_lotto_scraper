@@ -1,6 +1,8 @@
 class NyLottoScraper::Game
   attr_accessor :title, :draw_results, :jackpot, :next_draw_date,  :next_jackpot
 
+
+
   def self.scrape_games #returns array of games
     games = []
     doc = Nokogiri::HTML.parse(open("https://www.lotteryusa.com/new-york/"))
