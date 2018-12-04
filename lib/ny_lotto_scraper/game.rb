@@ -15,7 +15,7 @@ class NyLottoScraper::Game
         x.each do |game| ##b is instance of  game and has a title
           b = self.new
           b.title = game.css("div.game-title").text
-          b.draw_results = game.css("ul.draw-result").inner_text.strip.scan(/\d{1,2}/)
+          b.draw_results = game.css("ul.draw-result").inner_text.strip.scan(/\d{1,2}/).join(" ")
           b.jackpot = game.css("td.jackpot").inner_text.strip
           b.next_draw_date = game.css("td.jackpot").text
           b.next_jackpot = game.css("span.next-jackpot-amount").text.strip

@@ -22,8 +22,9 @@ class NyLottoScraper::CLI
 
       if input.to_i > 0
         the_game = @games[input.to_i-1]
-        puts "#{the_game.title}-#{the_game.jackpot}"
-        puts "#{the_game.draw_results}"
+        puts "Winning Numbers for #{the_game.title}: #{the_game.draw_results}"
+        puts "Jackpot: #{the_game.jackpot}"
+
       elsif input == "list"
         list_games
       else
