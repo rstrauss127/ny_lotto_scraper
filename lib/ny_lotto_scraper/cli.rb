@@ -7,7 +7,7 @@ class NyLottoScraper::CLI
   end
 
   def list_games
-    puts "Todays Lotto Info:"
+    puts "New York Lottery Games:"
     @games = NyLottoScraper::Game.scrape_games
     @games.each.with_index(1) do |game, i|
       puts "#{i}. #{game.title}"
@@ -17,7 +17,7 @@ class NyLottoScraper::CLI
   def menu
     input = nil
     while input != "exit"
-      puts "Enter the number of the game you'd like to see winning numbers for, or type list, or type exit:"
+      puts "Enter the number of the game you'd like to see the latest winning numbers and jackpot for. To view the list of games again, type 'list'. If you are finished, type 'exit'"
       input = gets.strip.downcase
 
       if input.to_i > 0
