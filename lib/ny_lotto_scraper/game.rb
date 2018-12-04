@@ -1,12 +1,7 @@
 class NyLottoScraper::Game
   attr_accessor :title, :draw_results, :jackpot, :next_draw_date,  :next_jackpot
 
-  def self.today #scrape each page and then return games based on that data
-    self.scrape_games
-  end
-
-
-  def self.scrape_games
+  def self.scrape_games #returns array of games
     games = []
     doc = Nokogiri::HTML.parse(open("https://www.lotteryusa.com/new-york/"))
     x = doc.css("table.state-results tr")
@@ -22,7 +17,6 @@ class NyLottoScraper::Game
           games << b
         end
         games.delete_if{|i| i.title == ""}#drop blank objects
-
      games
   end
 

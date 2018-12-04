@@ -8,7 +8,7 @@ class NyLottoScraper::CLI
 
   def list_games
     puts "Todays Lotto Info:"
-    @games = NyLottoScraper::Game.today
+    @games = NyLottoScraper::Game.scrape_games
     @games.each.with_index(1) do |game, i|
       puts "#{i}. #{game.title}"
     end
