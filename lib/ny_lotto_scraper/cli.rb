@@ -17,12 +17,14 @@ class NyLottoScraper::CLI
   def menu
     input = nil
     while input != "exit"
-      puts "Enter the number of the game you'd like to see the latest winning numbers and jackpot for. To view the list of games again, type 'list'. If you are finished, type 'exit'"
+      puts "Enter the number of the game you'd like to see the latest winning numbers and jackpot for."
+      puts "To view the list of games again, type 'list'. If you are finished, type 'exit'"
       input = gets.strip.downcase
 
       if input.to_i > 0
         the_game = @games[input.to_i-1]
-        puts "Winning Numbers for #{the_game.title}: #{the_game.draw_results}"
+        puts "Winning Numbers for #{the_game.title}, Date Drawn: #{the_game.draw_date}" 
+        puts "#{the_game.draw_results}"
         puts "Jackpot: #{the_game.jackpot}"
 
       elsif input == "list"
