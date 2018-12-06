@@ -1,7 +1,14 @@
 class NyLottoScraper::Game
   attr_accessor :title, :draw_results, :jackpot, :draw_date
+  @@all = []
 
+  def initialize
+    @@all << self
+  end
 
+  def self.all
+    @@all
+  end
 
   def self.scrape_games #returns array of games
     games = []

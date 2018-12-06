@@ -1,14 +1,19 @@
 class NyLottoScraper::CLI
 
+
   def call
+    scrape
     list_games
     menu
     goodbye
   end
 
+  def scrape
+    @games =  NyLottoScraper::Game.scrape_games
+  end
+
   def list_games
     puts "New York Lottery Games:"
-    @games = NyLottoScraper::Game.scrape_games
     @games.each.with_index(1) do |game, i|
       puts "#{i}. #{game.title}"
     end
