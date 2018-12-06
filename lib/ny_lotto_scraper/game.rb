@@ -1,5 +1,5 @@
 class NyLottoScraper::Game
-  attr_accessor :title, :draw_results, :jackpot, :draw_date
+  attr_accessor :title, :draw_results, :jackpot, :draw_date, :state
   @@all = []
 
   def initialize
