@@ -1,4 +1,6 @@
 CLI web scraper for the latest New York state lotto jackpot drawing information.
+
+(the states branch can succesfully ask you what state you want to see a list of games for, then asks which game you would like to see the results for.)
 Site I used for scraping: https://www.lotteryusa.com/new-york/
 
 # NyLottoScraper
