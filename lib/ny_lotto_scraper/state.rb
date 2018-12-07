@@ -1,15 +1,20 @@
 class InvalidType < StandardError; end
 
 class State
-  attr_accessor :name, :url
+  attr_accessor :name, :url, :doc
 
 
-  def initialize #create an empty area of lottogames whenevr a new state is created
-    @lottogames = []
+  def initialize(state_name)
+    @state = self.new
+    @state.name = state_name
+    @state.url = "https://www.lotteryusa.com/#{state_name}/"
+    @state.doc = Nokogiri::HTML(open("https://www.lotteryusa.com/#{state_name}/"))
+    @games = []
   end
 
+
   def lottogames
-    
+
     @lottogames.dup.freeze
   end
 
@@ -25,4 +30,15 @@ class State
   def first_game_title
     self.lottogames.first.title
   end
+end
+
+class StateScraper
+  attr_accessor :state, :doc
+
+  def initialize(state_name)
+    @state = self.new
+    @state.name = state_name
+    @doc = Nokogiri::HTML(open("https://www.lotteryusa.com/#{state_name}/"))
+  end
+
 end
