@@ -9,6 +9,7 @@ class State
   end
 
   def lottogames
+    
     @lottogames.dup.freeze
   end
 

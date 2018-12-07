@@ -6,6 +6,7 @@ require_relative './ny_lotto_scraper/cli'
 require_relative './ny_lotto_scraper/game'
 require_relative './ny_lotto_scraper/state'
 require_relative './ny_lotto_scraper/lottogame'
+require_relative './ny_lotto_scraper/statescraper'
 require 'bundler'
 
 Bundler.require
