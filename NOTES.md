@@ -1,8 +1,46 @@
-s_nm = StateScraper.new("new-mexico").scrape #=> <LottoGames for new-mexico>
+class NyLottoScraper::CLI
 
-  EXPECT s_nm.lottogames.first.title #=> Midday Pick 3
 
-1. We need a StateGameScraper class
-2. That class needs to instatiate the list_of_games for that state(new-mexico)
-3. We need to scrape the names of the games for that State
-4. We need to scrape the individual games for that state and add them to that instance
+  def call
+    scrape
+    list_games
+    menu
+    goodbye
+  end
+
+  def scrape
+    @games =  NyLottoScraper::Game.scrape_games
+  end
+
+  def list_games
+    puts "New York Lottery Games:"
+    @games.each.with_index(1) do |game, i|
+      puts "#{i}. #{game.title}"
+    end
+  end
+
+  def menu
+    input = nil
+    while input != "exit"
+      puts "Enter the number of the game you'd like to see the latest winning numbers and jackpot for."
+      puts "To view the list of games again, type 'list'. If you are finished, type 'exit'"
+      input = gets.strip.downcase
+
+      if input.to_i > 0
+        the_game = @games[input.to_i-1]
+        puts "Winning Numbers for #{the_game.title}, Date Drawn: #{the_game.draw_date}"
+        puts "#{the_game.draw_results}"
+        puts "Jackpot: #{the_game.jackpot}"
+
+      elsif input == "list"
+        list_games
+      elsif input != "exit" #idk why i need this
+        puts "Not sure what you want, type list or exit"
+      end
+    end
+  end
+
+  def goodbye
+    puts "Come back again"
+  end
+end
