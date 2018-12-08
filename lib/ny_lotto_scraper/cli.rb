@@ -1,17 +1,17 @@
 class NyLottoScraper::CLI
 
   def call
-    state
+    welcome
     scrape(@input)
     list_games
     menu
     goodbye
   end
 
-  def state
-    puts "what state?"
+  def welcome
+    puts "Welcome, what state would you like to see a list of lotto games for?."
+    puts "Two word states should have a dash, e.g new-york"
     @input = gets.strip.downcase
-
   end
 
   def scrape(state)
