@@ -1,6 +1,4 @@
 #!/usr/bin/env ruby
-
-
 require "bundler/setup"
 require "ny_lotto_scraper"
 
