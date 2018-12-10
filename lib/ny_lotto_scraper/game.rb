@@ -1,5 +1,5 @@
 class NyLottoScraper::Game
-  attr_accessor :title, :draw_results, :jackpot, :draw_date
+  attr_accessor :title, :draw_results, :jackpot, :draw_date, :state
   @@all = []
 
   def initialize
@@ -10,9 +10,9 @@ class NyLottoScraper::Game
     @@all
   end
 
-  def self.scrape_games #returns array of games
+  def self.scrape_games(state) #returns array of games
     games = []
-    doc = Nokogiri::HTML.parse(open("https://www.lotteryusa.com/new-york/"))
+    doc = Nokogiri::HTML(open("https://www.lotteryusa.com/#{state}/"))
     x = doc.css("table.state-results tr")
 
     x.shift #remove header
