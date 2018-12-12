@@ -19,7 +19,7 @@ class NyLottoScraper::CLI
   end
 
   def list_games
-    puts "New York Lottery Games:"
+    puts "Lottery Games:"
     @games.each.with_index(1) do |game, i|
       puts "#{i}. #{game.title}"
     end
