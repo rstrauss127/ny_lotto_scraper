@@ -2,7 +2,6 @@ class NyLottoScraper::CLI
 
   def call
     welcome
-    scrape(@input)
     list_games
     menu
     goodbye
@@ -11,7 +10,8 @@ class NyLottoScraper::CLI
   def welcome
     puts "Welcome, what state would you like to see a list of lotto games for?."
     puts "Two word states should have a dash, e.g new-york"
-    @input = gets.strip.downcase
+    input = gets.strip.downcase
+    scrape(input)
   end
 
   def scrape(state)
@@ -32,15 +32,16 @@ class NyLottoScraper::CLI
       puts "To view the list of games again, type 'list'. If you are finished, type 'exit'"
       input = gets.strip.downcase
 
-      if input.to_i > 0
+      if input.to_i > 0 && input.to_i <= @games.length
         the_game = @games[input.to_i-1]
         puts "Winning Numbers for #{the_game.title}, Date Drawn: #{the_game.draw_date}"
         puts "#{the_game.draw_results}"
         puts "Jackpot: #{the_game.jackpot}"
 
+
       elsif input == "list"
         list_games
-      elsif input != "exit" #idk why i need this
+      elsif input != "exit" 
         puts "Not sure what you want, type list or exit"
       end
     end
